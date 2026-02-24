@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Ticket Booking UI</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="overlay">
+
+  <div class="theme-buttons">
+    <span class="dot red" onclick="setTheme('theme-red')"></span>
+    <span class="dot blue" onclick="setTheme('theme-blue')"></span>
+    <span class="dot green" onclick="setTheme('theme-green')"></span>
+    <span class="dot yellow" onclick="setTheme('theme-yellow')"></span>
+  </div>
+
+  <div id="formContainer" class="booking-form theme-red">
+    <h2 style="text-align:center">🛕 Temple Ticket Booking</h2>
+
+    <form onsubmit="confirmBooking(event)">
+      <label>Full Name</label>
+      <input type="text" id="name" required>
+
+      <label>Visit Date</label>
+      <input type="date" id="date" required>
+
+      <label>Tickets</label>
+      <select id="tickets">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+
+      <button type="submit">Book Now</button>
+    </form>
+
+    <div id="ticket" class="ticket"></div>
+  </div>
+
+</div>
+
+<!-- Link JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
